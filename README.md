@@ -1,9 +1,9 @@
 # 🎬 Netflix Movie Dataset Analysis
 
-Unlocking insights from Netflix movie data with Python & Jupyter Notebook!  
-_A comprehensive data cleaning, analysis, and visualization journey._
+**Unlocking insights from Netflix movie data with Python & Jupyter Notebook!**  
+_**A comprehensive data cleaning, analysis, and visualization journey.**_
 
-![Alt text](image-path-or-url)
+![Alt text](https://github.com/omjaikumar23/Netflix-Data-Analysis/blob/947e4627dde59468c4d7781ffa82f1283823132f/Netflix.jpg)
 
 ---
 
