@@ -1,6 +1,7 @@
 # 🎬 Netflix Movie Dataset Analysis
 
 **Unlocking insights from Netflix movie data with Python & Jupyter Notebook!**  
+
 _**A comprehensive data cleaning, analysis, and visualization journey.**_
 
 ![Alt text](https://github.com/omjaikumar23/Netflix-Data-Analysis/blob/947e4627dde59468c4d7781ffa82f1283823132f/Netflix.jpg)
@@ -21,7 +22,7 @@ This project analyzes a large Netflix movie dataset using Python (in a **Jupyter
 ## 🔧 Technology Stack & Libraries
 
 - **Jupyter Notebook**: Interactive analysis & visual feedback  
-- **Python 3.x**
+- **Python 3.9.13**
     - `numpy` – Efficient numerics
     - `pandas` – Data handling & transformation
     - `matplotlib` – Core plotting
@@ -73,19 +74,6 @@ _See the full notebook for step-by-step code and results!_
 
 ---
 
-## 📊 Visualizations & Findings
-
-- **Genre Distribution**:  
-  ![](img/genre_distribution.png)
-- **Vote Categories**:  
-  ![](img/vote_distribution.png)
-- **Release Year Trend**:  
-  ![](img/release_year_hist.png)
-
-*Illustrative: update images after running the notebook.*
-
----
-
 ## 💡 Insights
 
 - 🎭 **Drama** is the most frequent genre (>14% of titles).
@@ -130,7 +118,7 @@ Feedback, fixes & new ideas welcome via pull requests or issues!
 
 ---
 
-_Analysis by [Your Name](https://github.com/your-username)_  
+_Analysis by [Om Jaikumar](https://github.com/omjaikumar23)_  
 📝 Built with Jupyter Notebook | 🚀 Happy Exploring!
 
 
