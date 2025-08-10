@@ -4,7 +4,7 @@
 
 _**A comprehensive data cleaning, analysis, and visualization journey.**_
 
-![Alt text](https://github.com/omjaikumar23/Netflix-Data-Analysis/blob/947e4627dde59468c4d7781ffa82f1283823132f/Netflix.jpg)
+![Alt text](https://github.com/omjaikumar23/Netflix-Data-Analysis/blob/0766de2fcee434ef99ea074bafc7898d8fa6c076/Nertflix.jpg)
 
 ---
 
