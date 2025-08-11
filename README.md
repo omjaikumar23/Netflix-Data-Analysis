@@ -1,90 +1,143 @@
-# 🎬 Netflix Movie Dataset Analysis
-
+# 🎬 Netflix Movie Dataset Analysis 
 **Unlocking insights from Netflix movie data with Python & Jupyter Notebook!**  
 
 _**A comprehensive data cleaning, analysis, and visualization journey.**_
 
-![Alt text](https://github.com/omjaikumar23/Netflix-Data-Analysis/blob/947e4627dde59468c4d7781ffa82f1283823132f/Netflix.jpg)
+![Alt text](https://github.com/omjaikumar23/Netflix-Data-Analysis/blob/0766de2fcee434ef99ea074bafc7898d8fa6c076/Nertflix.jpg)
 
 ---
 
-## ✨ Overview
+This project undertakes detailed data cleaning, exploratory data analysis (EDA), and visualization of a comprehensive Netflix movies dataset. The analysis reveals key trends in genres, release years, popularity, and voting patterns using Python libraries such as Pandas, NumPy, Matplotlib, and Seaborn.
 
-This project analyzes a large Netflix movie dataset using Python (in a **Jupyter Notebook**), applying data wrangling, categorization, and a range of visualizations to uncover insights such as:
-- Which genres dominate Netflix’s catalog
-- Most and least popular movies and their genres
-- Yearly production trends
-- Distribution of movie popularity
-- And more!
+***
 
----
+## ✨ Project Overview
 
-## 🔧 Technology Stack & Libraries
+The dataset contains 9,827 movie records with 9 attribute columns related to Netflix movies. This project aims to clean the data, transform it for analysis, and reveal patterns and insights through detailed visualizations and statistical summaries. The dataset includes movies spanning several decades, allowing an exploration of genre popularity over time as well as viewer ratings and popularity metrics.The project mainly focuses on: 
 
-- **Jupyter Notebook**: Interactive analysis & visual feedback  
-- **Python 3.9.13**
-    - `numpy` – Efficient numerics
-    - `pandas` – Data handling & transformation
-    - `matplotlib` – Core plotting
-    - `seaborn` – Advanced statistical visuals
+- Release year trends
+- Genre distribution and explosion to individual genres
+- Categorization of vote averages into popularity groups
+- Popularity and vote count distributions
+- Relationships between popularity, votes, genres, and release years
+- Visualizations with bar charts, histograms, heatmaps, scatterplots, violin plots, and area charts
+- The goal is to draw actionable insights into Netflix’s movie landscape and its evolution over time.
 
----
+***
 
-## 🗂️ Data Pipeline & Methodology
+## 🛠 Technology Stack & Libraries
 
-**Performed in the notebook:**
+- **Python 3.9**: Core programming language for data analysis
+- **Pandas**: Data loading, cleaning, transformation, and aggregation
+- **NumPy**: Numerical operations and array handling
+- **Matplotlib & Seaborn**: Advanced visualization libraries providing a wide variety of plots (bar charts, histograms, heatmaps, scatterplots, violin plots, etc.)
 
-1. **Data Exploration**
-    - Inspect head of data, info, datatypes
-    - Summary statistics & duplicate/NaN checks
+***
 
-2. **Data Cleaning & Preparation**
-    - 🗓️ Convert `Release_Date` to integer year  
-    - 🚮 Drop non-informative columns: `Overview`, `Original_Language`, `Poster_Url`
-    - 🏷️ Categorize `Vote_Average` into:  
-      `not_popular`, `below_avg`, `average`, `popular` (using quartiles)
-    - 🎭 Parse `Genre`:  
-      - Split comma-separated genres into lists
-      - Explode list into separate rows for genre-level analysis
-      - Convert genre to categorical type
-    - ✅ Remove duplicates & NaNs
+## 🗂 Data Pipeline & Methodology
 
-3. **Visualization & Insights**
-    - Plot genre frequency, vote categories, trends by year, etc.
-    - Highlight most/least popular movies (and genres)
-    - Find year with most titles released
+### 1. Data Loading and Initial Exploration
 
----
+- Loaded the `.csv` file (`mymoviesdb.csv`) specifying the newline character as the line terminator for accurate parsing.
+- Displayed initial rows and column data types.
+- Checked for missing or duplicate entries—none found, indicating tidy initial data.
 
-## 📁 Data Structure After Cleaning
+### 2. Data Cleaning & Preparation
 
-| Column        | Description                                           |
-|---------------|-------------------------------------------------------|
-| Release_Date  | Year of release (int)                                 |
-| Title         | Movie name                                            |
-| Popularity    | Numeric popularity score                              |
-| Vote_Count    | # of user votes                                       |
-| Vote_Average  | Popularity class (`not_popular`, `below_avg`, etc.)   |
-| Genre         | Single genre per row (categorical, after explosion)   |
+- Converted the **Release_Date** string to a datetime object and extracted only the **year** as an integer for temporal analysis.
+- Removed non-informative columns: `Overview`, `Original_Language`, and `Poster_Url` that do not aid numerical or categorical analysis.
+- Transformed the **Vote_Average** into four ordered categories based on quartiles: `not_popular` (lowest), `below_avg`, `average`, and `popular` (highest) using a custom function `categorize_col()`. This facilitates easier categorical analysis.
+- Processed the **Genre** column—initially a comma-separated string list per movie—by splitting into lists, then exploding so each movie-genre pair occupies its own row. This allows genre-level granularity. The column was then cast to the categorical datatype to optimize performance and memory.
+- Dropped any residual missing or null data after transformations.
 
----
+### 3. Exploratory Data Analysis (EDA) & Visualization
 
+The heart of the project; includes a broad range of analyses and charts:
 
-_See the full notebook for step-by-step code and results!_
+#### Univariate Analysis
 
----
+- Count and descriptive statistics of **Genres**.
+- **Bar charts and pie charts** illustrating the distribution of movie genres.
+- **Histograms** of movie production by year exposing release volume trends.
+- Count plots for categorized **Vote_Average** groups.
+- Histograms of **Vote_Count** and **Popularity** showing skewness and frequency.
 
-## 💡 Insights
+#### Bivariate Analysis
 
-- 🎭 **Drama** is the most frequent genre (>14% of titles).
-- ⭐ ~25% movies are “popular”—most frequently *Drama*.
-- 🕷️ *Spider-Man: No Way Home* leads popularity, spanning Action, Adventure, Sci-Fi.
-- 🎼 The lowest popularity: *United States vs. Billie Holiday*, *Threads* (multiple genres).
-- 📆 **2020** had the most movie releases in this dataset.
+- Scatter plot illustrating the correlation between **Vote_Count** and **Popularity** metrics.
+- Heatmap and stacked bar chart visualizations of the number of movies per genre per release year.
+- Boxplots comparing popularity within genres grouped by vote average category.
+- Count plot showing frequency of each genre split by vote average popularity.
 
----
+#### Multivariate Analysis
 
-## 🚀 Run It Yourself
+- FacetGrid plots showing **Popularity by Year** for each genre separately.
+- Violin plots visualizing **Popularity distributions** for vote average categories split by genre.
+- Horizontal bar chart with a color gradient showing top 10 most popular movies.
+- Area charts showing proportional shifts in genre compositions over time.
+
+### 4. Advanced Statistical Analysis
+
+- Descriptive statistics by genre for popularity and vote count.
+- Correlation matrix heatmap displaying relationships among `Popularity`, `Vote_Count`, and `Release_Date` (year).
+- Pairplot of numerical features for visual correlation and distribution analysis.
+
+***
+
+## 📁 Dataset Structure (Post-Cleaning)
+
+| Column        | Description                                         |
+|---------------|-----------------------------------------------------|
+| Release_Date  | Year the movie was released (integer)              |
+| Title         | Movie title                                         |
+| Popularity    | Numeric popularity score                            |
+| Vote_Count    | Number of user votes                                |
+| Vote_Average  | Categorized vote average — popularity bands         |
+| Genre         | Individual genre per row (categorical)             |
+
+***
+
+## 📈 Key Visualizations 
+
+- **Genre Distribution**: Displays frequency of each genre via bar and pie charts, highlighting Comedy, Drama, and Action as dominant genres.
+![Genre Distribution Bar Chart](images/genre_distribution_bar.png)
+![Genre Distribution Pie Chart](images/genre_distribution_pie.png)
+- **Movies Released Per Year**: Histogram and line chart expose the trend in Netflix movie production, with spikes in select years, notably around 2020.
+![Movies Produced Per Year Histogram](images/movies_per_year_histogram.png)
+![Movies Produced Per Year Line Plot](images/movies_per_year_line.png)
+- **Vote Average Distribution**: Count plot showing how movies are categorized by popularity bands.
+![Vote Average Distribution Count Plot](images/vote_average_countplot.png)
+- **Vote Count vs Popularity**: Scatterplot revealing strong relations but skewed distributions.
+![Vote Count vs Popularity Scatterplot](images/vote_count_popularity_scatter.png)
+- **Movies per Genre Year-Wise**: Heatmap and stacked bar chart uncover how different genres rose or declined over time.
+![Movies per Genre per Year Heatmap](images/genre_year_heatmap.png)
+![Movies per Genre per Year Stacked Bar](images/genre_year_stacked_bar.png)
+- **Top 10 Popular Movies**: Horizontal bar chart uses a color gradient to rank movies by highest popularity.
+![Top 10 Most Popular Movies](images/top10_popularity_bar.png)
+- **Proportional Genre Composition Over Time**: Area charts illustrate shifting genre popularity percentages annually.
+![Genre Proportion Over Time Area Chart](images/genre_proportion_area.png)
+- **Correlation Matrix and Pairplots**: Statistical explorations showing associations among key numeric variables.
+![Correlation Matrix Heatmap](images/correlation_matrix_heatmap.png)
+![Pairplot of Numerical Features](images/pairplot_numeric_features.png)
+
+*(You can save and include images of these plots in your GitHub repository for better presentation.)*
+
+***
+
+## 💡 Key Insights
+
+- Netflix’s movie catalog is heavily weighted toward **Drama**, **Comedy**, and **Action** genres.
+- Movie releases show **yearly fluctuations** with a notable production increase around 2020.
+- Popularity and vote counts show **long-tail, right-skewed** distributions indicating a few movies dominate in popularity.
+- The categorization of vote averages uncovers that about 25% of movies fall into the “popular” bucket.
+- **Spider-Man: No Way Home** ranks as one of the highest popularity movies, representing multiple genres.
+- Popularity varies within genres as shown in boxplots, revealing nuances by vote category.
+- Correlation analysis shows a **strong positive link between Vote Count and Popularity**, but a weaker association between release year and other metrics.
+- Genre analysis over years reveals shifts: Action and Thriller gain popularity at certain periods, while Drama remains relatively steady.
+
+***
+
+## 🚀 How to Run This Project
 
 1. **Clone the repo:**
     ```
@@ -103,22 +156,32 @@ _See the full notebook for step-by-step code and results!_
     ```
     Open `Netflix_Movie_Analysis.ipynb` and run all cells!
 
----
+***
 
-## 🤝 Contributions
+## 🤝 Contribution & Feedback
 
-Feedback, fixes & new ideas welcome via pull requests or issues!
+Contributions, issue reporting, and suggestions to improve the analysis or reporting are welcome. Open pull requests or issues on the repository.
 
----
+***
 
 ## 🙏 Acknowledgments
 
-- Netflix for inspiration & public datasets
-- The Python open-source community
+- Netflix and public data sources for movie data.
+- Python open source libraries (Pandas, NumPy, Matplotlib, Seaborn) that make this analysis possible.
+- Inspiration from Python data science community tutorials and best practices.
 
----
+***
 
 _Analysis by [Om Jaikumar](https://github.com/omjaikumar23)_  
 📝 Built with Jupyter Notebook | 🚀 Happy Exploring!
+
+
+
+
+
+
+
+
+
 
 
