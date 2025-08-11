@@ -1,7 +1,7 @@
-# 🎬 Netflix Movie Dataset Analysis 
+# 🎬 Netflix Movie Dataset Analysis 🚀
 **Unlocking insights from Netflix movie data with Python & Jupyter Notebook!**  
 
-_**A comprehensive data cleaning, analysis, and visualization journey.**_
+_**✨A comprehensive data cleaning, analysis, and visualization journey.✨**_
 
 ![Alt text](Images/Nertflix.jpg)
 
@@ -97,30 +97,75 @@ The heart of the project; includes a broad range of analyses and charts:
 
 ***
 
-## 📈 Key Visualizations 
+## 📈 Key Visualizations
 
-- **Genre Distribution**: Displays frequency of each genre via bar and pie charts, highlighting Comedy, Drama, and Action as dominant genres.
-![Genre Distribution Bar Chart](Images/Genre_Distribution_Bar_Chart.png)
-![Genre Distribution Pie Chart](Images/Genre_Distribution_Pie_Chart.png)
-- **Movies Released Per Year**: Histogram and line chart expose the trend in Netflix movie production, with spikes in select years, notably around 2020.
-![Movies Produced Per Year Histogram](Images/Movies_Produced_Per_Year_Histogram.png)
-![Movies Produced Per Year Line Plot](Images/Movies_Produced_Per_Year_Line_Plot.png)
-- **Vote Average Distribution**: Count plot showing how movies are categorized by popularity bands.
-![Vote Average Distribution Count Plot](Images/Vote_Average_Distribution_Count_Plot.png)
-- **Vote Count vs Popularity**: Scatterplot revealing strong relations but skewed distributions.
-![Vote Count vs Popularity Scatterplot](Images/Vote_Count_vs_Popularity_Scatterplot.png)
-- **Movies per Genre Year-Wise**: Heatmap and stacked bar chart uncover how different genres rose or declined over time.
-![Movies per Genre per Year Heatmap](Images/Movies_Per_Genre_Per_Year_HeatMap.png)
-![Movies per Genre per Year Stacked Bar](Images/Movies_Per_Genre_Per_Year_Stakced_Bar_Chart.png)
-- **Top 10 Popular Movies**: Horizontal bar chart uses a color gradient to rank movies by highest popularity.
-![Top 10 Most Popular Movies](Images/Top_10_Most_Popular_Movies.png)
-- **Proportional Genre Composition Over Time**: Area charts illustrate shifting genre popularity percentages annually.
-![Genre Proportion Over Time Area Chart](Images/Genre_Proportion_Over_Time_Area_Chart.png)
-- **Correlation Matrix and Pairplots**: Statistical explorations showing associations among key numeric variables.
-![Correlation Matrix Heatmap](Images/Correlation_Matrix_Heatmap.png)
-![Pairplot of Numerical Features](Images/Pair_Plot_of_Numerical_Features.png)
+---
 
-*(You can save and include images of these plots in your GitHub repository for better presentation.)*
+### **🎭 Genre Distribution**
+
+- Displays frequency of each genre via bar and pie charts, highlighting Comedy, Drama, and Action as dominant genres.
+
+<img src="Images/Genre_Distribution_Bar_Chart.png" alt="Genre Distribution Bar Chart" width="700" />
+<img src="Images/Genre_Distribution_Pie_Chart.png" alt="Genre Distribution Pie Chart" width="700" />
+
+---
+
+### **📅 Movies Released Per Year**
+
+- Histogram and line chart expose the trend in Netflix movie production, with spikes in select years, notably around 2020.
+
+<img src="Images/Movies_Produced_Per_Year_Histogram.png" alt="Movies Produced Per Year Histogram" width="700" />
+<img src="Images/Movies_Produced_Per_Year_Line_Plot.png" alt="Movies Produced Per Year Line Plot" width="700" />
+
+---
+
+### **⭐ Vote Average Distribution**
+
+- Count plot showing how movies are categorized by popularity bands.
+
+<img src="Images/Vote_Average_Distribution_Count_Plot.png" alt="Vote Average Distribution Count Plot" width="700" />
+
+---
+
+### **📊 Vote Count vs Popularity**
+
+- Scatterplot revealing strong relations but skewed distributions.
+
+<img src="Images/Vote_Count_vs_Popularity_Scatterplot.png" alt="Vote Count vs Popularity Scatterplot" width="700" />
+
+---
+
+### **🎬 Movies per Genre Year-Wise**
+
+- Heatmap and stacked bar chart uncover how different genres rose or declined over time.
+
+<img src="Images/Movies_Per_Genre_Per_Year_HeatMap.png" alt="Movies per Genre per Year Heatmap" width="700" />
+<img src="Images/Movies_Per_Genre_Per_Year_Stacked_Bar_Chart.png" alt="Movies per Genre per Year Stacked Bar" width="700" />
+
+---
+
+### **🏆 Top 10 Popular Movies**
+
+- Horizontal bar chart uses a color gradient to rank movies by highest popularity.
+
+<img src="Images/Top_10_Most_Popular_Movies.png" alt="Top 10 Most Popular Movies" width="700" />
+
+---
+
+### **📈 Proportional Genre Composition Over Time**
+
+- Area charts illustrate shifting genre popularity percentages annually.
+
+<img src="Images/Genre_Proportion_Over_Time_Area_Chart.png" alt="Genre Proportion Over Time Area Chart" width="700" />
+
+---
+
+### **🔍 Correlation Matrix and Pairplots**
+
+- Statistical explorations showing associations among key numeric variables.
+
+<img src="Images/Correlation_Matrix_Heatmap.png" alt="Correlation Matrix Heatmap" width="700" />
+<img src="Images/Pair_Plot_of_Numerical_Features.png" alt="Pairplot of Numerical Features" width="700" />
 
 ***
 
